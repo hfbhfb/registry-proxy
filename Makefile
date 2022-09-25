@@ -1,7 +1,7 @@
 
 all:
 	docker build -t hfbregistry:v0.0.1 .
-	docker build -t hfbregistry-ui:v0.0.1 -f Dockerfile-ui
+	docker build -f Dockerfile-ui  -t hfbregistry-ui:v0.0.1  .
 	docker-compose up -d
 
 clean:
