@@ -49,8 +49,8 @@ services:
     image: nginx:alpine
     restart: always
     ports:
-      - 80:80
-      - 443:443
+      - 16028:80
+      - 16029:443
     links:
       - ui:reg-ui
       - gcr:reg-gcr
