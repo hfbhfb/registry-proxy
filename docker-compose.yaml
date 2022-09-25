@@ -34,7 +34,7 @@ services:
       - registry-net
   ui:
     container_name: reg-ui
-    image: findsec/registry-ui:latest
+    image: hfbregistry-ui:v0.0.1
     restart: always
     links:
       - local:reg-local
