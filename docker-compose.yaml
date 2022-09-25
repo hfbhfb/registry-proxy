@@ -2,7 +2,7 @@ version: '2'
 services:
   local:
     container_name: reg-local
-    image: findsec/registry-proxy:latest
+    image: hfbregistry:v0.0.1
     restart: always
     environment:
       - DELETE_ENABLED=true
@@ -14,7 +14,7 @@ services:
       - registry-net
   gcr:
     container_name: reg-gcr
-    image: findsec/registry-proxy:latest
+    image: hfbregistry:v0.0.1
     restart: always
     environment:
       - PROXY_REMOTE_URL=https://gcr.io
@@ -24,7 +24,7 @@ services:
       - registry-net
   k8s-gcr:
     container_name: reg-k8s-gcr
-    image: findsec/registry-proxy:latest
+    image: hfbregistry:v0.0.1
     restart: always
     environment:
       - PROXY_REMOTE_URL=https://k8s.gcr.io
